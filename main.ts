@@ -54,7 +54,9 @@ router.post("/targets", async (ctx) => {
 
   const newObj: People = JSON.parse(
     await Deno.readTextFile("./people.json"),
-  ).push(newTarget);
+  );
+
+  newObj.push(newTarget);
 
   const stringified: string = JSON.stringify(newObj);
 
