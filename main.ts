@@ -52,7 +52,11 @@ router.post("/targets", async (ctx) => {
     blocked: body.blocked,
   };
 
-  const stringified: string = JSON.stringify(newTarget);
+  const stringified: string = JSON.stringify(
+    JSON.parse(
+      await Deno.readTextFile("./people.json"),
+    ).push(newTarget),
+  );
   await Deno.writeTextFile("./people.json", stringified);
   ctx.response.body = stringified;
 });
