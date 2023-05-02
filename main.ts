@@ -1,5 +1,5 @@
 import { Application, Router } from "https://deno.land/x/oak@v12.4.0/mod.ts";
-
+import { oakCors } from "https://deno.land/x/cors/mod.ts";
 const app = new Application();
 
 type People = Person[];
@@ -90,6 +90,7 @@ router.put("/targets/:name", async (ctx) => {
   ctx.response.body = target;
 });
 
+app.use(oakCors());
 app.use(router.allowedMethods());
 app.use(router.routes());
 

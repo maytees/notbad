@@ -2,5 +2,15 @@
   "tasks": {
     // Unstable for Deno KV
     "dev": "deno run -A --unstable --watch main.ts"
+  },
+  "lint": {
+    "exclude": [
+      "desktop"
+    ]
+  },
+  "fmt": {
+    "exclude": [
+      "desktop"
+    ]
   }
 }
