@@ -10,5 +10,9 @@
     {
         "name": "jp",
         "blocked": false
+    },
+    {
+        "name": "josh",
+        "blocked": true
     }
 ]
