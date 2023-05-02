@@ -3,7 +3,7 @@
 ::  `open.bat` to
 ::    %appdata%\Roaming\Microsoft\Windows
 ::        \StartMenu\Programs\Startup\open.bat
-::  Then, move `notbad.py` to C:\Users\Public\notbad.py
+::  Then, move `notbad.bat` to C:\Users\Public\notbad.bat
 :: This script has not been tested
 color 2
 
