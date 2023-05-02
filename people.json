@@ -1,18 +1,18 @@
 [
-    {
-        "name":"shaan",
-        "blocked": true
-    },
-    {
-        "name": "maytham",
-        "blocked": false
-    },
-    {
-        "name": "jp",
-        "blocked": false
-    },
-    {
-        "name": "josh",
-        "blocked": false
-    }
+  {
+    "name": "shaan",
+    "blocked": true
+  },
+  {
+    "name": "maytham",
+    "blocked": false
+  },
+  {
+    "name": "jp",
+    "blocked": false
+  },
+  {
+    "name": "josh",
+    "blocked": false
+  }
 ]

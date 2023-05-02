@@ -1,8 +1,8 @@
 # notbad
+
 Totally not bad...
 
-
-To add people, put like so in json file: 
+To add people, put like so in json file:
 
 ```json
 [

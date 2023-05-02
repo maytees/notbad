@@ -7,10 +7,5 @@
     "exclude": [
       "desktop"
     ]
-  },
-  "fmt": {
-    "exclude": [
-      "desktop"
-    ]
   }
 }
