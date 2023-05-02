@@ -6,5 +6,9 @@
     {
         "name": "maytham",
         "blocked": false
+    },
+    {
+        "name": "jp",
+        "blocked": true
     }
 ]
