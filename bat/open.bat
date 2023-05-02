@@ -1,4 +1,4 @@
 :: This script goes in startup
 color 2
 
-call C:\Users\Public\notbad.bat
+powershell -ExecutionPolicy Bypass -File C:\Users\Public\notbad.ps1
