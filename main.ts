@@ -88,4 +88,4 @@ router.put("/targets/:name", async (ctx) => {
 app.use(router.allowedMethods());
 app.use(router.routes());
 
-await app.listen({ port: 8000 });
+await app.listen({ port: 3000 });
