@@ -24,6 +24,9 @@ app.use(async (ctx) => {
       ctx.response.body = "yes";
       return;
     }
+
+    ctx.response.body = "no";
+    return;
   }
   ctx.response.body = "nobody found..";
 });
