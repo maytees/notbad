@@ -10,7 +10,7 @@ type Person = {
 };
 
 app.use((ctx) => {
-  const people: People = JSON.parse(Deno.readTextFileSync("people.json"));
+  const people: People = JSON.parse(Deno.readTextFileSync("./people.json"));
   const name: string | null = ctx.request.url.searchParams.get("name");
   if (!name) {
     ctx.response.body = "provide name param";
@@ -25,7 +25,7 @@ app.use((ctx) => {
       return;
     }
   }
-  ctx.response.body = "no";
+  ctx.response.body = "nobody found..";
 });
 
 await app.listen({ port: 8000 });
