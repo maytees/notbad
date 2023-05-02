@@ -1,0 +1,10 @@
+[
+    {
+        "name":"shaan",
+        "blocked": true
+    },
+    {
+        "name": "maytham",
+        "blocked": false
+    }
+]
