@@ -78,7 +78,6 @@ router.put("/targets/:name", async (ctx) => {
   const target: Person = people[targetIndex];
 
   if (!params.onoff) {
-    // target.blocked = !target.blocked;
     people[targetIndex].blocked = !people[targetIndex].blocked;
     await Deno.writeTextFile("./people.json", JSON.stringify(people));
     ctx.response.body = target;
@@ -86,7 +85,6 @@ router.put("/targets/:name", async (ctx) => {
   }
 
   people[targetIndex].blocked = Boolean(params.onoff);
-  // target.blocked = Boolean(params.onoff);
   await Deno.writeTextFile("./people.json", JSON.stringify(people));
 
   ctx.response.body = target;
