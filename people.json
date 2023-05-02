@@ -9,6 +9,6 @@
     },
     {
         "name": "jp",
-        "blocked": true
+        "blocked": false
     }
 ]
