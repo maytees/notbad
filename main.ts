@@ -9,8 +9,8 @@ type Person = {
   blocked: boolean;
 };
 
-app.use((ctx) => {
-  const people: People = JSON.parse(Deno.readTextFileSync("./people.json"));
+app.use(async (ctx) => {
+  const people: People = JSON.parse(await Deno.readTextFile("./people.json"));
   const name: string | null = ctx.request.url.searchParams.get("name");
   if (!name) {
     ctx.response.body = "provide name param";
