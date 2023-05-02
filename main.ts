@@ -85,6 +85,8 @@ router.put("/targets/:name", async (ctx) => {
   }
 
   target.blocked = Boolean(params.onoff);
+  await Deno.writeTextFile("./people.json", JSON.stringify(people));
+
   ctx.response.body = target;
 });
 
