@@ -1,5 +1,5 @@
 import { Application, Router } from "https://deno.land/x/oak@v12.4.0/mod.ts";
-import { oakCors } from "https://deno.land/x/cors/mod.ts";
+import { oakCors } from "https://deno.land/x/cors@v1.2.2/mod.ts";
 const app = new Application();
 
 type People = Person[];
@@ -52,9 +52,7 @@ router.post("/targets", async (ctx) => {
     blocked: body.blocked,
   };
 
-  const newObj: People = JSON.parse(
-    await Deno.readTextFile("./people.json"),
-  );
+  const newObj: People = JSON.parse(await Deno.readTextFile("./people.json"));
 
   newObj.push(newTarget);
 
@@ -85,6 +83,24 @@ router.put("/targets/:name", async (ctx) => {
   }
 
   people[targetIndex].blocked = Boolean(params.onoff);
+  await Deno.writeTextFile("./people.json", JSON.stringify(people));
+
+  ctx.response.body = target;
+});
+
+router.delete("/targets/:name", async (ctx) => {
+  const params = await ctx.params;
+
+  if (!params.name) {
+    ctx.response.status = 401;
+    ctx.response.body = "Please provide a name";
+  }
+
+  const people: People = JSON.parse(await Deno.readTextFile("./people.json"));
+  const targetIndex: number = people.findIndex((p) => p.name === params.name);
+  const target: Person = people[targetIndex];
+
+  people.splice(targetIndex, 1);
   await Deno.writeTextFile("./people.json", JSON.stringify(people));
 
   ctx.response.body = target;
