@@ -1,9 +1,8 @@
-# notbad
+# Trojan
 
-Totally not bad...
+Trojan hack which can turn off a windows pc remotely via an API
 
-To add people, put like so in json file:
-
+## How to add
 ```json
 [
   {
@@ -16,3 +15,5 @@ To add people, put like so in json file:
   }
 ]
 ```
+
+Not documented well; old project.
